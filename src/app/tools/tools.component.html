@@ -1,0 +1,25 @@
+<!-- <p [style.Color]='titleColor'> titlul este {{title | uppercase}}</p>
+<button mat-icon-button (click)="setTitle()">
+    <mat-icon>add</mat-icon>
+</button>
+<mat-form-field>
+    <input matInput placeholder="Add Note" [(ngModel)]="noteContent">
+</mat-form-field> -->
+
+
+<mat-card class="add-note-card" routerLink = '/addnote'>
+    <button mat-icon-button>
+        <mat-icon>add</mat-icon>
+    </button>
+</mat-card>
+
+<!-- <p>Note content is {{noteContent}}</p>
+
+<p>Current date is : {{currentDate | date : 'shortDate'}}</p>
+<p>Number is {{ 15 | addValue : 1.53}}</p>
+
+<div *ngFor="let element of array; let i=index; let odd=odd;">
+    <p> {{element}} </p>
+    <p> At index {{i}} </p>
+    <p> Is index an odd number?: {{odd}} </p>
+</div> -->
