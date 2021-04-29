@@ -27,8 +27,8 @@ export class AddNoteComponent implements OnInit {
 
   addNote(): void {
 
-    const note: Note = { id: "0", title: this.noteTitle, description: this.noteDescription, category: this.selectedNoteCategory };
-    alert(this.noteTitle + '\n' + this.noteDescription);
+    const note: Note = { id: "0", title: this.noteTitle, description: this.noteDescription, categoryId: this.selectedNoteCategory };
+    alert(this.noteTitle + '\n' + this.noteDescription + '\n'  + this.selectedNoteCategory);
     this.noteService.addNote(note);
   }
 }

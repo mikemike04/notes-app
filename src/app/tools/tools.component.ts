@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tools',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolsComponent implements OnInit {
 
+  @Input() receivedMesssage: string;
   title: string = "Add note ";
   titleColor: string = "red";
   noteContent: string = "test content";
@@ -19,6 +20,7 @@ export class ToolsComponent implements OnInit {
   setTitle() { this.title = "new title test" }
 
   ngOnInit(): void {
+    alert(this.receivedMesssage);
   }
 
 }

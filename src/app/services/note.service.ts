@@ -11,13 +11,13 @@ export class NoteService {
       id: "Id1",
       title: "First note",
       description: "This is the description for the first note",
-      category : "doing"
+      categoryId: "2"
     },
     {
       id: "Id2",
       title: "Second note",
       description: "This is the description for the second note",
-      category : "to do"
+      categoryId: "1"
     }
   ];
 
@@ -35,5 +35,10 @@ export class NoteService {
   addNote(note: Note) {
 
     this.notes.push(note);
+  }
+
+  getFilteredNotes(filteredId: string): Note[] {
+    //console.log(this.notes);
+    return this.notes.filter((note) => { note.categoryId === filteredId });
   }
 }

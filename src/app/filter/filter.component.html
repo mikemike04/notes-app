@@ -1,5 +1,19 @@
-<div class = "filter-container">
-    <div *ngFor="let category of categories" class = "filter-div">
-        <button mat-raised-button color="primary"> {{category.name | uppercase}} </button>
+<div class="filter-container">
+    <div *ngFor="let category of categories" class="filter-div">
+        <button mat-raised-button color="primary" (click)="selectFilter(category.id)"> {{category.name | uppercase}}
+        </button>
     </div>
+</div>
+
+<div class="search-word">
+    <form>
+        <mat-form-field>
+            <mat-label> Search using a specific word</mat-label>
+            <input matInput name="searchWord" [(ngModel)]="searchWord" />
+        </mat-form-field>
+    </form>
+
+    <button (click)="searchByWord()" mat-icon-button>
+        <mat-icon>search</mat-icon>
+    </button>
 </div>
